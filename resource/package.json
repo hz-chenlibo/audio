@@ -1,0 +1,36 @@
+{
+  "songData": [
+    {
+      "albumName": "流行",
+      "albumSong": [
+        {
+          "musicName": "逍遥叹",
+          "musicSinger": "胡歌",
+          "musicLink": "resource/流行/逍遥叹.mp3",
+          "lyricsLink": "逍遥叹.lrc",
+          "poster": "resource/流行/逍遥叹.png"
+        },
+        {
+          "musicName": "Try",
+          "musicSinger": "群星",
+          "musicLink": "resource/流行/Try.mp3",
+          "lyricsLink": "Try.lrc",
+          "poster": "resource/流行/try.jpg"
+        }
+      ]
+    },
+    {
+      "albumName": "纯音乐",
+      "albumSong": [
+        {
+          "musicName": "Weekend",
+          "musicSinger": "Dirk Reichardt",
+          "musicLink": "resource/纯音乐/Weekend.mp3",
+          "lyricsLink": "Weekend.lrc",
+          "poster": "resource/纯音乐/weekend.jpg"
+        }
+      ]
+    }
+  ],
+  "urlbase": ""
+}

@@ -1,0 +1,249 @@
+*{
+    padding: 0;
+    margin: 0;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    box-sizing: border-box;
+}
+.console{padding: 10px;font-size: 12px;}
+.console div{
+    margin-bottom: 10px;padding: 5px;cursor: pointer;display: inline-block;}
+.listobj li{cursor: pointer;}
+.listobj .now{color: #b94a48;}
+
+.mutedmode{opacity: 0.3;}
+.playanimate{
+    animation: turn infinite linear 10s;
+}
+html{
+    height: 100%;
+    font-size: 12px;
+    background: #111;
+    color: #aaa;
+    background: url(img/chrome.jpg) no-repeat left center;
+    background-size: cover;
+}
+.bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+}
+.main{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    height: 100%;
+    width: 100%;
+    background: rgba(0,0,0,0.8);
+}
+header{
+    color: #fff;
+    background: rgba(0,0,0,0.6);
+    font-weight: 100;
+    padding: 5px 4%;
+    height: 8%;
+    line-height: 1.3;
+}
+header h1{
+    font-size: 20px;
+}
+header h2{
+    font-size: 13px;
+    color: #bbb;
+}
+main{
+    height: 92%;
+}
+.scenes1{
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+}
+.turn{
+    width: 90%;
+    margin: auto;
+    position: relative;
+    /*display: flex;*/
+    /*justify-content: center;*/
+    /*align-items: center;*/
+}
+.timebar,.volbar{
+    font-size: 12px;
+    padding: 0 4%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.progress,.vol{
+    position: relative;
+    width: 78%;
+    height: 3px;
+    background: #999;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.progress .now,.vol .now{
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    background: #da4037;
+    width: 0;
+    height: 4px;
+    border-radius: 4px;
+}
+.progress .dot,.vol .dot{
+    position: absolute;
+    z-index: 3;
+    left: 0;
+    top: -6px;
+    width: 15px;
+    height: 15px;
+    background: #fff;
+    border-radius: 50%;
+    margin-left: -6px;
+    cursor: pointer;
+}
+/* val 区别样式 */
+.volbar .muted{
+    width: 20px;
+}
+.volbar .vol{
+    background: #999;
+    height: 2px;
+    flex-grow: 1;
+}
+.volbar .now{
+    background: #bbb;
+    height: 2px;
+}
+.turn #poster{
+    border-radius: 50%;
+    width: 62%;
+    height: auto;
+    position: absolute;
+    top: 19%;
+    left: 19%;
+    z-index: 1;
+}
+.turn .poster-before{
+    z-index: 2;
+    width: 100%;
+    height: auto;
+}
+.turn .poster-after{
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 3;
+    width: 100%;
+    height: auto;
+}
+.playconsole{
+    font-size: 20px;
+    padding: 20px 4%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: rgba(0,0,0,0.6);
+}
+.play{
+    border: 2px solid;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    border-radius: 50%;
+    text-align: center;
+}
+.prev,.next{
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    border: 2px solid;
+}
+.list,.more{
+    font-size: 30px;
+}
+.poplist{
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    z-index: 3;
+    background: #fff;
+}
+.poplist .mask{
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: #000;
+    opacity: 0;
+    display: none;
+}
+.poplist .mask.fadein{
+    opacity: 0.3;
+    display: block;
+}
+.listobj{
+    position: fixed;
+    width: 100%;
+    height: 50%;
+    bottom: -50%;
+    left: 0;
+    z-index: 2;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+}
+.listobj.popbottom{
+    bottom: 0;
+}
+.listobj h2{
+    text-align: center;
+    height: 55px;
+    line-height: 55px;
+    color: #333;
+    border-bottom: 1px solid #eee;
+}
+.listobj ul{
+    overflow-y: auto;
+    flex-grow: 1;
+}
+.listobj li{
+    font-size: 18px;
+    line-height: 24px;
+    padding: 10px 3%;
+    border-bottom: 1px solid #eee;
+}
+.listobj li span{
+    font-size: 14px;
+}
+@keyframes turn{
+    0% {
+        transform:rotate(0deg);
+        -ms-transform:rotate(0deg); 	/* IE 9 */
+    }
+    100% {
+        transform:rotate(360deg);
+        -ms-transform:rotate(360deg); 	/* IE 9 */
+    }
+}
+.scenes2{
+    display: none;
+}

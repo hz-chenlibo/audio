@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Audio</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+<div class="main">
+    <header>
+        <h1 class="musicname">逍遥叹</h1>
+        <h2 class="musicsinger">胡歌</h2>
+    </header>
+    <main>
+        <section class="scenes1">
+            <audio id="audio" loop src="resource/流行/逍遥叹.mp3"  preload="auto"><!--controls-->
+                你的浏览器不支持 <code>HTML5</code> 的 <code>Audio</code>
+            </audio>
+            <div class="volbar">
+                <div class="muted">
+                    <i class="fa fa-volume-up"></i>
+                    <!--<i class="fa fa-volume-off"></i>-->
+                </div>
+                <div class="vol">
+                    <div class="dot"></div>
+                    <div class="now"></div>
+                </div>
+            </div>
+            <div class="turn">
+                <img class="poster-before" src="img/disc-plus.png" alt="">
+                <img id="poster" src="" alt="">
+                <img class="poster-after" src="img/disc_light-plus.png" alt="">
+            </div>
+            <div class="timebar">
+                <div class="nowtime">0:00</div>
+                <div class="progress">
+                    <div class="dot"></div>
+                    <div class="now"></div>
+                </div>
+                <div class="endtime"></div>
+            </div>
+            <div class="playconsole">
+                <div class="more"><i class="fa fa-ellipsis-v"></i></div>
+                <div class="prev"><i class="fa fa-step-backward"></i></div>
+                <div class="play"><i class="fa fa-play"></i></div>
+                <div class="next"><i class="fa fa-step-forward"></i></div>
+                <div class="list"><i class="fa fa-list-ul"></i></div>
+            </div>
+        </section>
+        <section class="scenes2">
+            <div class="console">
+                <div class="stop"><i class="fa fa-stop"></i></div>
+                <div class="voladd"><i class="fa fa-volume-up"></i></div>
+                <div class="volminus"><i class="fa fa-volume-down"></i></div>
+                <div class="single">single</div>
+                <div class="listmode">list</div>
+                <div class="random">random</div>
+                <a class="download" title="" href="#" download="mp3"><i class="fa fa-download"></i></a>
+                <div><label><input type="checkbox" class="autoplay">进入页面后自动播放</label></div>
+
+                <select name="speed" id="speed">
+                    <option value="0.2">0.6</option>
+                    <option value="0.5">0.8</option>
+                    <option selected value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select>
+            </div>
+        </section>
+        <div class="poplist">
+            <div class="mask"></div>
+            <div class="listobj"></div>
+        </div>
+    </main>
+</div>
+<div class="bg"></div>
+<script src="main.js"></script>
+</body>
+</html>
